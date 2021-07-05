@@ -1,0 +1,46 @@
+.bg-dark {
+    background-color: #d34615!important;
+}
+
+.navbar { 
+     margin-bottom: 0px;
+     padding: 0px 30px;
+}
+
+.heading{
+    color:#fff;
+    float: left;
+}
+
+a{
+    float: right;
+}
+
+.h3{
+    margin-top: 10px !important;
+}
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 14px;
+}
+
+
+
+a.round {
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: #000;
+    font-weight: 550;
+}
+
+a:hover{
+    color: #111;
+}

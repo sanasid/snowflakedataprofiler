@@ -1,0 +1,91 @@
+﻿<!-- <div class="card mt-4">
+    <h4 class="card-header">Admin</h4>
+    <div class="card-body">
+        <p>This page can be accessed <u>only by administrators</u>.</p>
+        <p class="mb-1">All users from secure (admin only) api end point:</p>
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <ul *ngIf="users">
+            <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+        </ul>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2 admin-left">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" routerLink="/admin" >Admin</a>
+        <a class="nav-item nav-link" (click)="show =true" >Link 1</a>
+        <a class="nav-item nav-link" (click)="show =true" >Link 2</a>
+        <a class="nav-item nav-link" (click)="show =true" >Link 3</a>
+        <a class="nav-item nav-link" (click)="show =true" >Link 4</a>
+        <a class="nav-item nav-link" (click)="show =true" >Link 5</a>
+        <a class="nav-item nav-link" (click)="show =true" >View All User</a>
+    </div>
+     </div>
+    <div class="col-10 admin-right" >
+      <h3>Admin Dashboard</h3>
+<div class="card mt-4" *ngIf="show==true">
+    <div class="card-body">
+        <table style="width:100%">
+            <tr>
+              <th>Firstname 
+              </th>
+              <th>Lastname 
+              </th>
+              <th>Action</th>
+            
+            </tr>
+            <tr *ngFor="let item of data; let i = index">
+              <td>
+              <input type="text" [(ngModel)]="item.name" [disabled]="!item.isEditable"/>
+             
+              </td>
+              <td> <input type="text" [(ngModel)]="item.lastname" [disabled]="!item.isEditable"/></td>
+              <!-- <td>{{item.name}}</td>
+              <td>{{item.lastname}}</td> -->
+              <td>
+                <button class="btn btn-primary" (click)="item.isEditable=!item.isEditable" *ngIf="!item.isEditable">Edit</button>
+                <button class="btn btn-primary" *ngIf="item.isEditable" (click)="item.isEditable=!item.isEditable">Save</button>
+                <button class="btn btn-primary"  type="button" (click)="deleteRows(i)">Delete</button>
+
+             </td>
+    
+            </tr>
+            
+          </table>
+          </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+
+
+
+    <!-- <table>
+      <thead><tr><th>Name</th><th>Action</th></tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let employee of data">
+          <td>
+           
+            <input type="text" [(ngModel)]="employee.name" [disabled]="!employee.isEditable"/>
+          </td>
+          <td>
+             <button (click)="employee.isEditable=!employee.isEditable" *ngIf="!employee.isEditable">Edit</button>
+             <button *ngIf="employee.isEditable" (click)="employee.isEditable=!employee.isEditable">Save</button>
+             
+          </td>
+        </tr>
+      </tbody>
+    </table> -->
+
+
+    
+
+   
+

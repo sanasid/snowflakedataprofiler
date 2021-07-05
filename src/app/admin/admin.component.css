@@ -1,0 +1,46 @@
+table, th, td {
+    border: 1px solid #21252999;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 15px;
+  }
+
+  .col-2.admin-left {
+   
+    background-color: #f2f2f2;
+    padding: 50px;
+    height: 556px;
+    box-shadow: 1px 1px 1px #11111124;
+}
+/* .admin-right{
+background-image: url(https://wallpaperaccess.com/full/4893732.jpg);
+opacity: 0.5;
+} */
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+
+  width: 100% !important;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+
+}
+.col-10.admin-right {
+  padding: 50px !important;
+}
+
+a.nav-item.nav-link {
+  color: #d34615;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  margin-right: 20px;
+}
+
+.card-body {
+  background-color: antiquewhite;
+}

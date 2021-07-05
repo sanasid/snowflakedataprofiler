@@ -1,0 +1,77 @@
+<div class="col-md-6 offset-md-3 mt-5">
+    <!-- <div class="alert alert-info">
+        <strong>Normal User</strong> - U: user P: user<br />
+        <strong>Administrator</strong> - U: admin P: admin
+    </div> -->
+    <div class="card">
+       
+        <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <!-- <div class="form-group">
+                    <label for="firstName">FirstName</label>
+                    <input type="text" formControlName="firstName" class="form-control" 
+                    [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required">Username is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">LastName</label>
+                    <input type="text" formControlName="lastName" class="form-control" 
+                    [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastName.errors.required">Username is required</div>
+                    </div>
+                </div> -->
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" formControlName="username" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">Username is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" formControlName="password" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Choose your cloud provider*</label><br>
+                    <ul name="city" (click)="onChange($event.target.value)">
+                        <img src="https://signup.snowflake.com/static/images/cloud_provider_choices/aws-logo.svg">
+                        <img src="https://signup.snowflake.com/static/images/cloud_provider_choices/gcp-logo.png">
+                        <img src="https://signup.snowflake.com/static/images/cloud_provider_choices/microsoft-logo.svg">
+                        <li *ngFor="let country of countries" [value]="country.id" (click)="region()">{{country.name}}
+                        </li>
+                    </ul>
+                    <br>
+                    <select id="sel1" name="Country" class="rounded-inputs20 select-select col-md-3"
+                        *ngIf="show== true">
+                        <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+                    </select>
+                </div>
+<br>
+<br>
+                <div class="form-group" *ngIf="show== true">
+                    <label for="password">Account</label><br>
+                    <input type="text" formControlName="account" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required">Username is required</div>
+                    </div>
+
+                </div>
+                <button [disabled]="loading" class="btn btn-primary">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Get Started
+                </button>
+                <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+            </form>
+        </div>
+    </div>
+</div>
